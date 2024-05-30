@@ -32,13 +32,13 @@ export class ReadJsonFileImportStatementComponent {
     }
   ]
   
-  employeeData: any;
+  //employeeData: any;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.employeeData = this.employees;
+    //this.employeeData = this.employees;
   }
 
 }
