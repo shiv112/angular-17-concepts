@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import employees from 'E:/target-developers-2024/read-json-different-ways/read-json-different-ways/src/assets/employees.json';
+
+
+
 @Component({
   selector: 'read-json-file-import-statement',
   standalone: true,
@@ -9,16 +11,34 @@ import employees from 'E:/target-developers-2024/read-json-different-ways/read-j
   templateUrl: './read-json-file-import-statement.component.html',
   styleUrl: './read-json-file-import-statement.component.scss'
 })
+
 export class ReadJsonFileImportStatementComponent {
 
+  "employees": [
+    {
+      "id": "1",
+      "firstName": "shivam",
+      "lastName": "sahu"
+    },
+    {
+      "id": "2",
+      "firstName": "puneet",
+      "lastName": "viswkarma"
+    },
+    {
+      "id": "3",
+      "firstName": "James",
+      "lastName": "Bond"
+    }
+  ]
+  
   employeeData: any;
 
   constructor() {
-    this.employeeData = employees;
   }
 
   ngOnInit() {
-  
+    this.employeeData = this.employees;
   }
 
 }
